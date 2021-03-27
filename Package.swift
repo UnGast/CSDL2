@@ -7,6 +7,10 @@ let package = Package(
         .library(
             name: "CSDL2",
             targets: ["CSDL2"]),
+        .library(
+            name: "CSDL2Vulkan",
+            targets: ["CSDL2Vulkan"]
+        )
     ],
     targets: [
         .systemLibrary(
@@ -15,6 +19,9 @@ let package = Package(
             providers: [
                 .brew(["sdl2"]),
                 .apt(["libsdl2-dev"])
-            ])
+            ]),
+        .systemLibrary(
+            name: "CSDL2Vulkan"
+        )
     ]
 )
